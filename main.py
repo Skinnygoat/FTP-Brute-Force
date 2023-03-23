@@ -8,8 +8,8 @@ def main():
     ftp = ftplib.FTP()
     port = input("Enter the port: ")
 
-    file_usernames = open(r"<===>", "r+") # Select the file with potential logins or usernames. [r] before the string refers to paths in Windows!
-    file_passwords = open(r"<===>", "r+") # Select the file with potential passwords. [r] have the same role like in line 11.
+    file_usernames = open(r"...Put the path to your file right here...", "r+") # Select the file with potential logins or usernames.
+    file_passwords = open(r"...Put the path to your file right here...", "r+") # Select the file with potential passwords.
 
     usernames = file_usernames.read().split("\n")
     passwords = file_passwords.read().split("\n")
